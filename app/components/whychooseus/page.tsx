@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 import { Headset, Users2, Rocket, ArrowRight } from "lucide-react";
 
 const features = [
@@ -23,28 +23,19 @@ const features = [
   },
 ];
 
-// Container variants for staggered children
+// Container variant to stagger children
 const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.15 } },
 };
 
-// Card animation (TypeScript-safe)
+// Card animation (TS-safe with cubicBezier easing)
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }, // TS-safe
-  },
-};
-
-// Icon hover animation
-const iconVariants = {
-  hover: {
-    scale: 1.15,
-    rotate: [0, 5, -5, 0],
-    transition: { duration: 0.6, ease: "easeInOut" }, // TS-safe
+    transition: { duration: 0.6, ease: cubicBezier(0.22, 1, 0.36, 1) },
   },
 };
 
@@ -60,13 +51,13 @@ const WhyChooseZoner = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: cubicBezier(0.22, 1, 0.36, 1) }}
           className="text-4xl md:text-5xl font-bold text-white mb-16 tracking-tight"
         >
           Why choose <span className="text-blue-400">Zoner?</span>
         </motion.h2>
 
-        {/* Feature Cards */}
+        {/* Features grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -81,10 +72,13 @@ const WhyChooseZoner = () => {
               whileHover={{ scale: 1.04 }}
               className="relative group p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-blue-500/40 transition-all duration-300"
             >
-              {/* Icon */}
+              {/* Icon with hover */}
               <motion.div
-                variants={iconVariants}
-                whileHover="hover"
+                whileHover={{
+                  scale: 1.15,
+                  rotate: [0, 5, -5, 0],
+                  transition: { duration: 0.6, ease: cubicBezier(0.22, 1, 0.36, 1) },
+                }}
                 className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-8 shadow-md shadow-blue-500/20"
               >
                 {item.icon}
@@ -107,7 +101,7 @@ const WhyChooseZoner = () => {
                 ))}
               </p>
 
-              {/* Learn More */}
+              {/* Learn more */}
               <motion.div
                 initial={{ opacity: 0, x: -5 }}
                 whileHover={{ opacity: 1, x: 0 }}
