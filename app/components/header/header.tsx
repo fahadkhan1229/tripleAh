@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,31 +23,23 @@ const Header = () => {
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="relative">
             <div className="absolute inset-0 bg-blue-600 blur-lg opacity-40 group-hover:opacity-60 transition-opacity" />
-            <svg 
-              width="40" height="40" viewBox="0 0 24 24" fill="url(#blueGradient)" 
-              stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-              className="relative drop-shadow-lg"
-            >
-              <defs>
-                <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" />
-                  <stop offset="100%" stopColor="#1e3a8a" />
-                </linearGradient>
-              </defs>
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <polyline points="16 11 18 13 22 9" />
-            </svg>
+            <Image
+  src="/zoner_logo.svg"
+  alt="AAH Logo"
+  width={100}
+  height={100}
+  className="relative z-10 bg-white/70 rounded-3xl pt-3 py-2 p-4"
+/>
           </div>
 
-          <div className="flex flex-col leading-none">
+          {/* <div className="flex flex-col leading-none">
             <span className="text-xl font-black tracking-tighter text-white">
               AAH<span className="text-blue-500">.</span>
             </span>
             <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-blue-400">
               Triple A H Group
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Desktop Navigation */}

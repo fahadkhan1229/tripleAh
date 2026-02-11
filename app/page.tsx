@@ -5,6 +5,7 @@ import Home from "./components/home/page";
 import AboutUs from "./components/about/page";
 import Services from "./components/service/page";
 import ContactUs from "./components/contact/page";
+import WhyChooseUs from "./components/whychooseus/page";
 
 export default function LandingPage() {
   return (
@@ -12,6 +13,7 @@ export default function LandingPage() {
       <Header />
       <Home /> 
       <AboutUs />
+      <WhyChooseUs></WhyChooseUs>
       <Services />
       <ContactUs />
     </div>
