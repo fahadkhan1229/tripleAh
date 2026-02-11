@@ -34,7 +34,7 @@ const Home = () => {
     <section
       ref={containerRef}
       id="home"
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-[#0a0f1d] pt-20 px-4 sm:px-6"
+      className="relative min-h-svh flex items-center justify-center overflow-hidden bg-[#0a0f1d] pt-20 px-4 sm:px-6"
     >
       {/* Background Layers */}
       <motion.div style={{ y: shouldReduceMotion ? 0 : yBg }} className="absolute inset-0 z-0">
@@ -92,7 +92,7 @@ const Home = () => {
           {/* Badge */}
           <motion.div
             variants={fadeInUp}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-md text-blue-400 text-xs sm:text-sm font-medium mb-6 sm:mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-md text-blue-700 text-xs sm:text-sm font-medium mb-6 sm:mb-8"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>

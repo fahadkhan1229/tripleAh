@@ -87,7 +87,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[#0a0f1d]/90 backdrop-blur-2xl shadow-2xl"
+            className="md:hidden  overflow-hidden rounded-2xl border border-white/10 bg-[#0a0f1d]/90 backdrop-blur-2xl shadow-2xl"
           >
             <div className="flex flex-col gap-2 p-6">
               {navItems.map((item) => (
