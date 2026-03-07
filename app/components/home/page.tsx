@@ -1,5 +1,11 @@
 "use client";
-import { motion, useScroll, useTransform, useReducedMotion, easeOut } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+  easeOut,
+} from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 const Home = () => {
@@ -21,8 +27,16 @@ const Home = () => {
   });
 
   // Parallax
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "10%" : "20%"]);
-  const yBlobs = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "20%" : "40%"]);
+  const yBg = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", isMobile ? "10%" : "20%"],
+  );
+  const yBlobs = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", isMobile ? "20%" : "40%"],
+  );
 
   // TypeScript-safe fadeInUp variant
   const fadeInUp = {
@@ -37,7 +51,10 @@ const Home = () => {
       className="relative min-h-svh flex items-center justify-center overflow-hidden bg-[#0a0f1d] pt-20 px-4 sm:px-6"
     >
       {/* Background Layers */}
-      <motion.div style={{ y: shouldReduceMotion ? 0 : yBg }} className="absolute inset-0 z-0">
+      <motion.div
+        style={{ y: shouldReduceMotion ? 0 : yBg }}
+        className="absolute inset-0 z-0"
+      >
         <img
           src="/bg.avif"
           alt="Modern Financial Building"
@@ -64,9 +81,16 @@ const Home = () => {
             <motion.div
               key={i}
               className="absolute w-1 h-1 sm:w-2 sm:h-2 bg-white/20 rounded-full"
-              initial={{ x: Math.random() * 100 + "%", y: Math.random() * 100 + "%" }}
+              initial={{
+                x: Math.random() * 100 + "%",
+                y: Math.random() * 100 + "%",
+              }}
               animate={{ y: ["0%", "100%"], opacity: [0.1, 0.4, 0.1] }}
-              transition={{ duration: 15 + Math.random() * 10, repeat: Infinity, delay: i }}
+              transition={{
+                duration: 15 + Math.random() * 10,
+                repeat: Infinity,
+                delay: i,
+              }}
             />
           ))}
       </motion.div>
@@ -92,7 +116,7 @@ const Home = () => {
           {/* Badge */}
           <motion.div
             variants={fadeInUp}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-md text-blue-400 text-xs sm:text-sm font-medium mb-6 sm:mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-md white text-xs sm:text-sm font-medium mb-6 sm:mb-8"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -115,11 +139,14 @@ const Home = () => {
           {/* Subtext */}
           <motion.p
             variants={fadeInUp}
-            className="text-gray-300/80 text-sm sm:text-lg md:text-xl max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light px-4 sm:px-0"
+            className="text-gray-50 text-lg sm:text-xl max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light px-4 sm:px-0"
           >
             Expertise in Bookkeeping, Taxation & Financial Services designed to
             scale your business with{" "}
-            <span className="text-white font-medium">precision and clarity</span>.
+            <span className="text-white font-medium">
+              precision and clarity
+            </span>
+            .
           </motion.p>
 
           {/* Buttons */}
@@ -128,7 +155,9 @@ const Home = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center px-6 sm:px-0"
           >
             <motion.button
-              whileHover={!isMobile ? { scale: 1.06, rotate: [0, 1, -1, 0] } : {}}
+              whileHover={
+                !isMobile ? { scale: 1.06, rotate: [0, 1, -1, 0] } : {}
+              }
               whileTap={{ scale: 0.96 }}
               className="px-8 py-3.5 sm:py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-xl font-bold text-base sm:text-lg shadow-lg w-full sm:w-auto"
             >

@@ -1,92 +1,269 @@
 "use client";
-import { Variants, motion, easeOut } from "framer-motion";
-import { ShieldCheck, Target, Users } from "lucide-react";
+import { motion, Variants, easeOut } from "framer-motion";
+import {
+  Target,
+  Eye,
+  ShieldCheck,
+  BookOpen,
+  TrendingUp,
+  Briefcase,
+  Scale,
+} from "lucide-react";
 
 const AboutUs = () => {
-  const features = [
-    { icon: <ShieldCheck />, title: "Accurate & Compliant", desc: "Always up-to-date with latest tax laws." },
-    { icon: <Target />, title: "Cost-Effective", desc: "Maximizing your ROI through smart filing." },
-    { icon: <Users />, title: "Client Focused", desc: "Dedicated support for your specific niche." },
-  ];
-
-  // Parent container variant
   const container: Variants = {
     hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
+    visible: { transition: { staggerChildren: 0.1 } },
   };
 
-  // Individual feature card variant
   const item: Variants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: easeOut },
-    },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
   };
 
   return (
-    <section id="about" className="py-20 sm:py-24 px-4 sm:px-6 md:px-12 bg-[#0a0f1d]">
+    <section
+      id="about"
+      className="py-12 bg-[#0a0f1d] px-4 md:px-6 relative overflow-hidden"
+    >
+      {/* Background Decorative Element */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10" />
+
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* About Text */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: easeOut }}
+        {/* Section Header */}
+        <div className="text-center mb-24 px-4 sm:px-0">
+          {/* Tagline */}
+          <motion.span
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-blue-400 font-semibold tracking-widest uppercase text-sm mb-4 block"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 sm:mb-6">
-              Who We Are
-            </h2>
-            <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
-              Triple A H Group Oy isn't just an accounting firm. We are your strategic growth partners. Based in Finland and serving globally, we blend traditional precision with modern technology.
-            </p>
-            <button className="text-blue-400 font-semibold border-b border-blue-400 pb-1 hover:text-blue-300 transition-colors text-sm sm:text-base">
-              Learn our history →
-            </button>
+            Excellence in Every Equation
+          </motion.span>
+
+          {/* Main Heading */}
+          <motion.h2
+            initial={{ opacity: 0, y: -25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight tracking-tight"
+          >
+            About{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+              AAA Triple A H
+            </span>{" "}
+            Group Oy
+          </motion.h2>
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="max-w-3xl mx-auto text-gray-300 text-base sm:text-lg leading-relaxed"
+          >
+            A Finland-based powerhouse delivering{" "}
+            <span className="text-white font-semibold">
+              precision-driven accounting
+            </span>
+            , financial management, and strategic consultancy across Europe, the
+            Middle East, and Asia. We empower businesses to operate with
+            clarity, efficiency, and confidence.
+          </motion.p>
+        </div>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="space-y-20"
+        >
+          {/* Company Overview Card */}
+          <motion.div
+            variants={item}
+            className="grid lg:grid-cols-2 gap-12 items-center px-4"
+          >
+            <div className="space-y-6 text-gray-200 text-base">
+              <p className="border-l-4 border-blue-600 pl-6 italic text-white font-medium">
+                "We operate with the highest international standards of
+                accuracy, compliance, and strategic relevance."
+              </p>
+              <p>
+                Built on a foundation of integrity and analytical excellence,
+                AAA Triple A H Group Oy guides clients through complex financial
+                environments with clarity. We partner with startups and
+                established enterprises to optimize financial health and
+                statutory compliance.
+              </p>
+            </div>
+
+            {/* CEO Message Box */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+              <div className="relative bg-[#11182f] p-4 md:p-10 rounded-3xl border border-white/5">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  CEO Message – M.W.A
+                </h3>
+                <p className="text-gray-300 mb-6 leading-relaxed text-base">
+                  "As Founder and CEO, it is my privilege to lead an
+                  organization built on precision and a deep commitment to
+                  empowering businesses in an increasingly complex global
+                  environment..."
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="h-1 w-12 bg-blue-500"></div>
+                  <p className="text-blue-400 font-semibold uppercase tracking-wider text-sm">
+                    Founder & CEO
+                  </p>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Features */}
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className="grid grid-cols-1 gap-6"
-          >
-            {features.map((f, i) => (
+          {/* Mission/Vision/Values Grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Mission",
+                icon: <Target className="w-8 h-8 text-blue-400" />,
+                desc: "To deliver technology-driven financial solutions that empower organizations with clarity and strategic foresight.",
+              },
+              {
+                title: "Vision",
+                icon: <Eye className="w-8 h-8 text-cyan-400" />,
+                desc: "To be a globally recognized advisory firm known for transformative stewardship and sustainable growth.",
+              },
+              {
+                title: "Core Values",
+                icon: <ShieldCheck className="w-8 h-8 text-indigo-400" />,
+                desc: "Integrity, Precision, Strategic Excellence, and Client-Centric Innovation.",
+              },
+            ].map((box, i) => (
               <motion.div
                 key={i}
                 variants={item}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.5)",
-                }}
-                className="p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-lg flex items-start gap-4 cursor-pointer transition-transform duration-300"
+                whileHover={{ y: -5 }}
+                className="bg-[#11182f]/50 p-8 rounded-2xl border border-white/5 backdrop-blur-sm"
               >
-                <motion.div
-                  className="bg-gradient-to-tr from-blue-500 to-purple-500 p-4 rounded-xl flex items-center justify-center text-white shadow-lg text-3xl sm:text-4xl"
-                  animate={{ rotate: [0, 10, -10, 0] }}
-                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                >
-                  {f.icon}
-                </motion.div>
-                <div>
-                  <h4 className="text-white font-bold text-lg sm:text-xl mb-1">{f.title}</h4>
-                  <p className="text-gray-400 text-sm sm:text-base">{f.desc}</p>
-                </div>
+                <div className="mb-4">{box.icon}</div>
+                <h4 className="text-xl font-bold text-white mb-3">
+                  {box.title}
+                </h4>
+                <p className="text-gray-300 text-base leading-relaxed">
+                  {box.desc}
+                </p>
               </motion.div>
             ))}
+          </div>
+
+          {/* Core Expertise Section */}
+          <motion.div variants={item} className="space-y-10">
+            <h3 className="text-2xl font-bold text-white text-center">
+              Core Expertise
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <ExpertiseCard
+                icon={<BookOpen />}
+                title="Accounting"
+                list={[
+                  "Full-cycle Bookkeeping",
+                  "IFRS & Finnish GAAP",
+                  "VAT & Tax Filings",
+                  "Payroll Management",
+                ]}
+              />
+              <ExpertiseCard
+                icon={<TrendingUp />}
+                title="Financial Mgmt"
+                list={[
+                  "Budgeting & Forecasting",
+                  "Investment Analysis",
+                  "Cost Optimization",
+                  "Capital Structuring",
+                ]}
+              />
+              <ExpertiseCard
+                icon={<Briefcase />}
+                title="Consultancy"
+                list={[
+                  "Business Restructuring",
+                  "Operational Efficiency",
+                  "Market Entry",
+                  "Digital Transformation",
+                ]}
+              />
+              <ExpertiseCard
+                icon={<Scale />}
+                title="Corporate"
+                list={[
+                  "Tax Planning",
+                  "EU Registration",
+                  "Contract Review",
+                  "HR Support",
+                ]}
+              />
+            </div>
           </motion.div>
-        </div>
+
+          {/* Why Choose Us - Minimal Banner */}
+          <motion.div
+            variants={item}
+            className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl p-8 md:p-12 border border-blue-500/20 text-center"
+          >
+            <h3 className="text-2xl font-bold text-white mb-8">
+              Why Partner With Us?
+            </h3>
+            <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+              {[
+                "Global Expertise",
+                "Precision Driven",
+                "Tailored Solutions",
+                "Tech-Integrated",
+              ].map((trait, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2 text-gray-200 font-medium"
+                >
+                  <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                  {trait}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
 };
+
+/* Helper Component for Expertise Cards */
+const ExpertiseCard = ({
+  icon,
+  title,
+  list,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  list: string[];
+}) => (
+  <div className="bg-[#11182f] p-4 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group">
+    <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4 text-blue-400 group-hover:scale-110 transition-transform">
+      {icon}
+    </div>
+    <h4 className="text-lg font-bold text-white mb-4">{title}</h4>
+    <ul className="space-y-2">
+      {list.map((item, idx) => (
+        <li key={idx} className="text-gray-300 text-base flex items-center gap-2">
+          <span className="w-1 h-1 bg-gray-600 rounded-full" />
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
 export default AboutUs;

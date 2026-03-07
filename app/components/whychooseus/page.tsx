@@ -31,17 +31,18 @@ const containerVariants = {
 
 // Card animation (TS-safe with cubicBezier easing)
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: cubicBezier(0.22, 1, 0.36, 1) },
+    scale: 1,
+    transition: { duration: 0.5, ease: cubicBezier(0.22, 1, 0.36, 1) },
   },
 };
 
 const WhyChooseZoner = () => {
   return (
-    <section className="relative py-24 bg-[#0a0f1d] overflow-hidden">
+    <section className="relative py-6 md:py-12 bg-[#0a0f1d] overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
@@ -52,9 +53,10 @@ const WhyChooseZoner = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: cubicBezier(0.22, 1, 0.36, 1) }}
-          className="text-4xl md:text-5xl font-bold text-white mb-16 tracking-tight"
+          className="text-3xl md:text-5xl md:ps-2 font-bold text-white mb-16 tracking-tight"
         >
-          Why choose <span className="text-blue-400">Zoner?</span>
+          Why choose{" "}
+          <span className="text-blue-400">AAA Triple A H Group Oy?</span>
         </motion.h2>
 
         {/* Features grid */}
@@ -70,14 +72,17 @@ const WhyChooseZoner = () => {
               key={index}
               variants={cardVariants}
               whileHover={{ scale: 1.04 }}
-              className="relative group p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-blue-500/40 transition-all duration-300"
+              className="relative group p-4 md:p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-blue-500/40 transition-all duration-300"
             >
               {/* Icon with hover */}
               <motion.div
                 whileHover={{
                   scale: 1.15,
                   rotate: [0, 5, -5, 0],
-                  transition: { duration: 0.6, ease: cubicBezier(0.22, 1, 0.36, 1) },
+                  transition: {
+                    duration: 0.6,
+                    ease: cubicBezier(0.22, 1, 0.36, 1),
+                  },
                 }}
                 className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-8 shadow-md shadow-blue-500/20"
               >
@@ -85,10 +90,12 @@ const WhyChooseZoner = () => {
               </motion.div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+              <h3 className="text-xl font-bold text-white mb-4">
+                {item.title}
+              </h3>
 
               {/* Description with highlighted link */}
-              <p className="text-gray-400 leading-relaxed mb-6">
+              <p className="text-gray-300 text-base leading-relaxed mb-6">
                 {item.desc.split(item.link || "").map((part, i, arr) => (
                   <span key={i}>
                     {part}
