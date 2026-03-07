@@ -6,6 +6,7 @@ import AboutUs from "./components/about/page";
 import Services from "./components/service/page";
 import ContactUs from "./components/contact/page";
 import WhyChooseUs from "./components/whychooseus/page";
+import OurBusinesses from "./components/ourBusinesses/page";
 
 export default function LandingPage() {
   return (
@@ -13,8 +14,9 @@ export default function LandingPage() {
       <Header />
       <Home /> 
       <AboutUs />
-      <WhyChooseUs></WhyChooseUs>
+      <WhyChooseUs />
       <Services />
+      <OurBusinesses />  {/* 👈 new section added */}
       <ContactUs />
     </div>
   );
