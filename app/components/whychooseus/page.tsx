@@ -55,8 +55,7 @@ const WhyChooseZoner = () => {
           transition={{ duration: 0.8, ease: cubicBezier(0.22, 1, 0.36, 1) }}
           className="text-3xl md:text-5xl md:ps-2 font-bold text-white mb-16 tracking-tight"
         >
-          Why choose{" "}
-          <span className="text-blue-400">AAA Triple A H Group Oy?</span>
+          Why choose <span className="text-blue-400">Triple A H Group Oy?</span>
         </motion.h2>
 
         {/* Features grid */}

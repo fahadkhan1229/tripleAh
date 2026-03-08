@@ -53,7 +53,7 @@ const AboutUs = () => {
           >
             About{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-              AAA Triple A H
+              Triple A H
             </span>{" "}
             Group Oy
           </motion.h2>
@@ -94,7 +94,7 @@ const AboutUs = () => {
               </p>
               <p>
                 Built on a foundation of integrity and analytical excellence,
-                AAA Triple A H Group Oy guides clients through complex financial
+                Triple A H Group Oy guides clients through complex financial
                 environments with clarity. We partner with startups and
                 established enterprises to optimize financial health and
                 statutory compliance.

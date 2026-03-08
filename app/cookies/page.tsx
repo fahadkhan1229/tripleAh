@@ -35,7 +35,7 @@ export default function CookiePolicy() {
             <p>
               This Cookie Policy explains how{" "}
               <span className="text-white font-medium">
-                AAA Triple A H Group Oy
+                Triple A H Group Oy
               </span>{" "}
               uses cookies and similar technologies to recognize you when you
               visit our website.
@@ -95,7 +95,7 @@ export default function CookiePolicy() {
 
         {/* Footer */}
         <div className="mt-14 md:mt-16 pt-8 md:pt-10 border-t border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-xs sm:text-sm text-gray-500">
-          <p>© 2026 AAA Triple A H Group Oy</p>
+          <p>© 2026 Triple A H Group Oy</p>
           <div className="flex flex-wrap gap-4 sm:gap-6">
             <Link href="/terms" className="hover:text-white cursor-pointer transition">
               Terms

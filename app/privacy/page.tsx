@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
             <p className="border-l-2 border-blue-500/50 pl-5 sm:pl-6 py-2">
               This Privacy Policy explains how{" "}
               <span className="text-white font-semibold">
-                AAA Triple A H Group Oy
+                Triple A H Group Oy
               </span>{" "}
               collects, uses, and protects your information when you use our website and services.
             </p>
@@ -86,7 +86,7 @@ export default function PrivacyPolicy() {
 
         {/* Footer */}
         <div className="mt-14 md:mt-20 pt-8 md:pt-10 border-t border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-xs sm:text-sm uppercase tracking-widest text-gray-500">
-          <p>© 2026 AAA Triple A H Group Oy</p>
+          <p>© 2026 Triple A H Group Oy</p>
 
           <div className="flex flex-wrap gap-4 sm:gap-6">
             <Link href="/terms" className="hover:text-white cursor-pointer transition">

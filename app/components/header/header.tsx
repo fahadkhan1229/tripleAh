@@ -13,9 +13,11 @@ const Header = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
+    { name: "Service", href: "#services" },
     { name: "Our Businesses", href: "#businesses" },
+    { name: "Meet out team", href: "/teams" },
     { name: "Contact", href: "#contact" },
+    
   ];
 
   useEffect(() => {
@@ -54,9 +56,9 @@ const Header = () => {
 
               <Image
                 src="/logo1.png"
-                alt="AAA Triple A H Group Oy Logo"
-                width={130}
-                height={130}
+                alt="Triple A H Group Oy Logo"
+                width={160}
+                height={160}
                 className="relative z-10 bg-none "
               />
             </div>
@@ -64,7 +66,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8 text-gray-200 font-medium">
+        <nav className="hidden lg:flex gap-8 text-gray-200 font-medium">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -86,14 +88,14 @@ const Header = () => {
         </nav>
 
         {/* Desktop Button */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold px-6 py-2.5 rounded-xl shadow-lg shadow-blue-500/20 transition-all hover:scale-105 active:scale-95">
             Get a Quote
           </button>
         </div>
 
         {/* Mobile Hamburger */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
@@ -110,7 +112,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden overflow-hidden border border-white/10 bg-[#0a0f1d]/20 backdrop-blur-2xl shadow-2xl"
+            className="lg:hidden overflow-hidden border border-white/10 bg-[#0a0f1d]/20 backdrop-blur-2xl shadow-2xl"
           >
             <div className="flex flex-col gap-2 p-6">
               {navItems.map((item) => (

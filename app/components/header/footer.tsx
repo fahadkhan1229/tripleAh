@@ -48,7 +48,7 @@ const Footer = () => {
             >
               <Image
                 src="/logo2.png"
-                alt="AAA Triple A H Group Oy Logo"
+                alt="Triple A H Group Oy Logo"
                 width={140}
                 height={50}
                 className="brightness-110"
@@ -111,8 +111,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-8 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm md:text-lg text-gray-400 text-center md:text-left order-2 md:order-1">
-            &copy; {new Date().getFullYear()} AAA Triple A H Group Oy. All
-            rights reserved.
+            &copy; {new Date().getFullYear()} Triple A H Group Oy. All rights
+            reserved.
           </p>
           <div className="flex space-x-6 order-1 md:order-2">
             {socialLinks.map((item) => (

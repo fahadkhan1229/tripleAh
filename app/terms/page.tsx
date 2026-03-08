@@ -9,7 +9,7 @@ import {
   Globe,
   Lock,
   FileText,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 
 type LegalLayoutProps = {
@@ -19,24 +19,26 @@ type LegalLayoutProps = {
   children: ReactNode;
 };
 
-const LegalLayout = ({ title, subtitle, children, lastUpdated }: LegalLayoutProps) => {
-
+const LegalLayout = ({
+  title,
+  subtitle,
+  children,
+  lastUpdated,
+}: LegalLayoutProps) => {
   const sections = [
     { id: "overview", label: "Overview" },
     { id: "usage", label: "Usage Policy" },
     { id: "property", label: "Intellectual Property" },
-    { id: "liability", label: "Liability" }
+    { id: "liability", label: "Liability" },
   ];
 
   return (
     <div className="min-h-screen bg-[#0d1425] text-gray-300 relative overflow-x-hidden">
-
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/4 w-72 md:w-96 h-72 md:h-96 bg-blue-600/10 blur-[120px] rounded-full -z-10"/>
-      <div className="absolute bottom-0 right-1/4 w-72 md:w-96 h-72 md:h-96 bg-indigo-600/10 blur-[120px] rounded-full -z-10"/>
+      <div className="absolute top-0 left-1/4 w-72 md:w-96 h-72 md:h-96 bg-blue-600/10 blur-[120px] rounded-full -z-10" />
+      <div className="absolute bottom-0 right-1/4 w-72 md:w-96 h-72 md:h-96 bg-indigo-600/10 blur-[120px] rounded-full -z-10" />
 
       <div className="max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
-
         {/* Back Navigation */}
         <Link
           href="/"
@@ -48,7 +50,6 @@ const LegalLayout = ({ title, subtitle, children, lastUpdated }: LegalLayoutProp
 
         {/* Header */}
         <header className="border-b border-white/10 pb-8 md:pb-12">
-
           <span className="text-xs uppercase tracking-widest text-blue-400 font-semibold">
             Legal Center
           </span>
@@ -65,12 +66,10 @@ const LegalLayout = ({ title, subtitle, children, lastUpdated }: LegalLayoutProp
             <FileText className="h-4 w-4 mr-2 text-blue-500" />
             Last updated: {lastUpdated}
           </div>
-
         </header>
 
         {/* Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-12 md:mt-16">
-
           {/* Sidebar */}
           <aside className="hidden lg:block lg:col-span-3">
             <div className="sticky top-24">
@@ -96,18 +95,17 @@ const LegalLayout = ({ title, subtitle, children, lastUpdated }: LegalLayoutProp
           <main className="lg:col-span-9 space-y-14 md:space-y-16">
             {children}
           </main>
-
         </div>
 
         {/* Contact Section */}
         <div className="mt-16 md:mt-24 text-center p-8 md:p-12 rounded-3xl border border-white/10 bg-white/5">
-
           <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
             Questions about our policies?
           </h3>
 
           <p className="text-gray-400 mb-8 max-w-md mx-auto text-sm md:text-base">
-            Our legal team is available to help clarify our policies and ensure transparency.
+            Our legal team is available to help clarify our policies and ensure
+            transparency.
           </p>
 
           <Link
@@ -115,11 +113,9 @@ const LegalLayout = ({ title, subtitle, children, lastUpdated }: LegalLayoutProp
             className="inline-flex w-full sm:w-auto items-center justify-center px-6 md:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:bg-blue-500 transition"
           >
             Contact Team
-            <ArrowRight className="h-4 w-4 ml-2"/>
+            <ArrowRight className="h-4 w-4 ml-2" />
           </Link>
-
         </div>
-
       </div>
     </div>
   );
@@ -129,30 +125,29 @@ export default function TermsOfService() {
   return (
     <LegalLayout
       title="Terms of Service"
-      subtitle="These terms govern the relationship between AAA Triple A H Group Oy and users accessing our digital services."
+      subtitle="These terms govern the relationship between Triple A H Group Oy and users accessing our digital services."
       lastUpdated="March 2026"
     >
-
       {/* Section 1 */}
       <section id="overview">
         <div className="flex items-center mb-4">
-          <Globe className="h-6 w-6 text-indigo-400 mr-3"/>
+          <Globe className="h-6 w-6 text-indigo-400 mr-3" />
           <h2 className="text-xl md:text-2xl font-bold text-white">
             1. Global Use Agreement
           </h2>
         </div>
 
         <p className="text-gray-400 text-md leading-relaxed">
-          By accessing our website, you agree to comply with these Terms of Service.
-          These terms form a legally binding agreement between you and
-          AAA Triple A H Group Oy.
+          By accessing our website, you agree to comply with these Terms of
+          Service. These terms form a legally binding agreement between you and
+          Triple A H Group Oy.
         </p>
       </section>
 
       {/* Section 2 */}
       <section id="usage">
         <div className="flex items-center mb-4">
-          <Scale className="h-6 w-6 text-blue-400 mr-3"/>
+          <Scale className="h-6 w-6 text-blue-400 mr-3" />
           <h2 className="text-xl md:text-2xl font-bold text-white">
             2. Acceptable Use Policy
           </h2>
@@ -173,7 +168,7 @@ export default function TermsOfService() {
       {/* Section 3 */}
       <section id="property">
         <div className="flex items-center mb-4">
-          <ShieldCheck className="h-6 w-6 text-purple-400 mr-3"/>
+          <ShieldCheck className="h-6 w-6 text-purple-400 mr-3" />
           <h2 className="text-xl md:text-2xl font-bold text-white">
             3. Intellectual Property
           </h2>
@@ -181,25 +176,24 @@ export default function TermsOfService() {
 
         <p className="text-gray-400">
           All content, trademarks, branding, and proprietary technology belong
-          exclusively to AAA Triple A H Group Oy.
+          exclusively to Triple A H Group Oy.
         </p>
       </section>
 
       {/* Section 4 */}
       <section id="liability">
         <div className="flex items-center mb-4">
-          <Lock className="h-6 w-6 text-red-400 mr-3"/>
+          <Lock className="h-6 w-6 text-red-400 mr-3" />
           <h2 className="text-xl md:text-2xl font-bold text-white">
             4. Limitation of Liability
           </h2>
         </div>
 
         <p className="text-gray-400">
-          AAA Triple A H Group Oy shall not be liable for indirect,
-          incidental, or consequential damages.
+          Triple A H Group Oy shall not be liable for indirect, incidental, or
+          consequential damages.
         </p>
       </section>
-
     </LegalLayout>
   );
 }
