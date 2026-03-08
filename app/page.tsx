@@ -9,6 +9,7 @@ import Services from "./components/service/page";
 import ContactUs from "./components/contact/page";
 import WhyChooseUs from "./components/whychooseus/page";
 import OurBusinesses from "./components/ourBusinesses/page";
+import Footer from "./components/header/footer";
 
 export default function LandingPage() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -38,7 +39,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="flex flex-col gap-0 scroll-smooth">
+    <div className="flex flex-col gap-0 scroll-smooth pb-6">
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 origin-left z-[101]"
         style={{ scaleX }}
@@ -50,6 +51,7 @@ export default function LandingPage() {
       <Services />
       <OurBusinesses /> {/* 👈 new section added */}
       <ContactUs />
+      <Footer/>
       <AnimatePresence>
         {showScrollTop && (
           <motion.button

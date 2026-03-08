@@ -239,14 +239,14 @@ const ContactUs = () => {
       </motion.div>
 
       {/* Footer */}
-      <motion.footer
+      {/* <motion.footer
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
         className="mt-12 sm:mt-20 text-center text-gray-400 text-sm"
       >
         © 2024 AAA Triple A H Group Oy. All rights reserved. | Privacy Policy
-      </motion.footer>
+      </motion.footer> */}
     </section>
   );
 };

@@ -23,7 +23,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="md:py-12 bg-[#0d1425] px-6">
+    <section id="services" className="md:py-12 py-6 bg-[#0d1425] px-6">
       {/* Section Header */}
       <div className="max-w-7xl mx-auto text-center mb-16">
         <motion.h2

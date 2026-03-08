@@ -24,7 +24,7 @@ const AboutUs = () => {
   return (
     <section
       id="about"
-      className="py-12 bg-[#0a0f1d] px-4 md:px-6 relative overflow-hidden"
+      className="py-12 bg-[#0a0f1d] px-6 md:px-6 relative overflow-hidden"
     >
       {/* Background Decorative Element */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10" />
@@ -85,9 +85,9 @@ const AboutUs = () => {
           {/* Company Overview Card */}
           <motion.div
             variants={item}
-            className="grid lg:grid-cols-2 gap-12 items-center px-4"
+            className="grid lg:grid-cols-2 gap-12 items-center md:px-4"
           >
-            <div className="space-y-6 text-gray-200 text-base">
+            <div className="space-y-6 px-4  text-gray-200 text-base ">
               <p className="border-l-4 border-blue-600 pl-6 italic text-white font-medium">
                 "We operate with the highest international standards of
                 accuracy, compliance, and strategic relevance."
@@ -147,7 +147,7 @@ const AboutUs = () => {
                 key={i}
                 variants={item}
                 whileHover={{ y: -5 }}
-                className="bg-[#11182f]/50 p-8 rounded-2xl border border-white/5 backdrop-blur-sm"
+                className="bg-[#11182f]/50 md:p-8 p-4 rounded-2xl border border-white/5 backdrop-blur-sm"
               >
                 <div className="mb-4">{box.icon}</div>
                 <h4 className="text-xl font-bold text-white mb-3">
@@ -212,12 +212,12 @@ const AboutUs = () => {
           {/* Why Choose Us - Minimal Banner */}
           <motion.div
             variants={item}
-            className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl p-8 md:p-12 border border-blue-500/20 text-center"
+            className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl p-6 md:p-12 border border-blue-500/20"
           >
             <h3 className="text-2xl font-bold text-white mb-8">
               Why Partner With Us?
             </h3>
-            <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+            <div className="flex flex-wrap md:justify-center gap-6 md:gap-12">
               {[
                 "Global Expertise",
                 "Precision Driven",
@@ -250,7 +250,7 @@ const ExpertiseCard = ({
   title: string;
   list: string[];
 }) => (
-  <div className="bg-[#11182f] p-4 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group">
+  <div className="bg-[#11182f] p-4 md:p-8 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group">
     <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4 text-blue-400 group-hover:scale-110 transition-transform">
       {icon}
     </div>

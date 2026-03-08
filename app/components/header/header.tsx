@@ -45,20 +45,23 @@ const Header = () => {
       animate={{ y: 0 }}
       className="fixed top-0 w-full z-[100]"
     >
-      <div className="max-w-7xl mx-auto backdrop-blur-xl bg-white/5 border border-white/10 px-3 py-3 flex justify-between items-center shadow-2xl">
+      <div className="max-w-7xl mx-auto backdrop-blur-xl bg-white/5 border border-white/10 px-3 md:py-3 flex justify-between items-center shadow-2xl">
         {/* Fixed Bold Blue Logo */}
-        <div className="flex items-center gap-3 group cursor-pointer">
-          <div className="relative">
-            <div className="absolute inset-0 bg-blue-600 blur-lg opacity-40 group-hover:opacity-60 transition-opacity" />
-            {/* <Image
-              src="/logox.png"
-              alt="AAA Triple A H Group Oy Logo"
-              width={100}
-              height={100}
-              className="relative z-10 bg-none  pt-3 py-2 p-4"
-            /> */}
+        <Link href="#home" aria-label="Go to homepage">
+          <div className="flex items-center gap-3 group">
+            <div className="relative">
+              <div className="absolute inset-0  blur-lg opacity-40 group-hover:opacity-60 transition-opacity" />
+
+              <Image
+                src="/logo1.png"
+                alt="AAA Triple A H Group Oy Logo"
+                width={130}
+                height={130}
+                className="relative z-10 bg-none "
+              />
+            </div>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8 text-gray-200 font-medium">
@@ -107,7 +110,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden overflow-hidden rounded-2xl border border-white/10 bg-[#0a0f1d]/20 backdrop-blur-2xl shadow-2xl"
+            className="md:hidden overflow-hidden border border-white/10 bg-[#0a0f1d]/20 backdrop-blur-2xl shadow-2xl"
           >
             <div className="flex flex-col gap-2 p-6">
               {navItems.map((item) => (
