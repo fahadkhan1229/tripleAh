@@ -111,7 +111,7 @@ const LegalLayout = ({ title, subtitle, children, lastUpdated }: LegalLayoutProp
           </p>
 
           <Link
-            href="/contact"
+            href="/#contact"
             className="inline-flex w-full sm:w-auto items-center justify-center px-6 md:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:bg-blue-500 transition"
           >
             Contact Team
