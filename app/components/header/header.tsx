@@ -15,7 +15,7 @@ const Header = () => {
     { name: "About", href: "#about" },
     { name: "Service", href: "#services" },
     { name: "Our Businesses", href: "#businesses" },
-    { name: "Meet our team", href: "/teams" },
+    { name: "Meet our team", href: "#teams" },
     { name: "Contact", href: "#contact" },
     
   ];
@@ -89,9 +89,11 @@ const Header = () => {
 
         {/* Desktop Button */}
         <div className="hidden lg:block">
-          <button className="bg-gradient-to-r  cursor-pointer from-blue-500 to-purple-500 text-white font-bold px-6 py-2.5 rounded-xl shadow-lg shadow-blue-500/20 transition-all hover:scale-105 active:scale-95">
-            Get a Quote
-          </button>
+         <a href="#contact">
+  <button className="bg-gradient-to-r cursor-pointer from-blue-500 to-purple-500 text-white font-bold px-6 py-2.5 rounded-xl shadow-lg shadow-blue-500/20 transition-all hover:scale-105 active:scale-95">
+    Get a Quote
+  </button>
+</a>
         </div>
 
         {/* Mobile Hamburger */}

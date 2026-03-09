@@ -40,12 +40,19 @@ const teamData = [
 ];
 
 export default function TeamGrid() {
-  const [selectedMember, setSelectedMember] = useState<null | typeof teamData[0]>(null);
+  const [selectedMember, setSelectedMember] = useState<
+    null | (typeof teamData)[0]
+  >(null);
 
   return (
-    <section className="min-h-screen bg-[#0a0f1d] py-24 px-6 text-white font-sans">
+    <section
+      id="teams"
+      className="min-h-screen  scroll-mt-32 bg-[#0a0f1d] py-24 px-6 text-white font-sans"
+    >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 border-b border-white/10 pb-6">Meet Our Team</h2>
+        <h2 className="text-4xl font-bold mb-16 border-b border-white/10 pb-6">
+          Meet Our Team
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamData.map((member) => (
@@ -68,7 +75,9 @@ export default function TeamGrid() {
                 </div>
               </div>
               <h3 className="mt-4 text-xl font-bold">{member.name}</h3>
-              <p className="text-gray-500 text-sm uppercase">{member.role}, {member.company}</p>
+              <p className="text-gray-500 text-sm uppercase">
+                {member.role}, {member.company}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -83,27 +92,46 @@ export default function TeamGrid() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedMember(null)}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
+              className="fixed inset-0 bg-black/60  backdrop-blur-md z-50"
             />
             <motion.div
               layoutId={`card-${selectedMember.id}`}
-              className="fixed inset-y-0 right-0 w-full md:w-[500px] bg-[#0f0f0f] z-[60] p-10 border-l border-white/10 shadow-2xl overflow-y-auto"
+              className="fixed inset-y-0 right-0 mt-18 w-full md:w-[500px] bg-[#0f0f0f] z-[60] p-10 border-l border-white/10 shadow-2xl overflow-y-auto"
             >
-              <button onClick={() => setSelectedMember(null)} className="absolute cursor-pointer top-6 right-6 text-gray-400 hover:text-white">
+              <button
+                onClick={() => setSelectedMember(null)}
+                className="absolute cursor-pointer top-6 right-6 text-gray-400 hover:text-white"
+              >
                 <X size={28} />
               </button>
-              
-              <img src={selectedMember.image} className="w-40 h-40 rounded-xl object-center mb-8 border border-white/10 shadow-lg" alt="" />
-              <h2 className="text-3xl font-black mb-1">{selectedMember.name}</h2>
-              <p className="text-blue-500 font-bold mb-8 uppercase text-xs tracking-widest">{selectedMember.role}</p>
-              
+
+              <img
+                src={selectedMember.image}
+                className="w-40 h-40 rounded-xl object-center mb-8 border border-white/10 shadow-lg"
+                alt=""
+              />
+              <h2 className="text-3xl font-black mb-1">
+                {selectedMember.name}
+              </h2>
+              <p className="text-blue-500 font-bold mb-8 uppercase text-xs tracking-widest">
+                {selectedMember.role}
+              </p>
+
               <div className="space-y-6">
                 <p className="text-gray-400 leading-relaxed italic border-l-2 border-blue-500/50 pl-4">
                   "{selectedMember.bio}"
                 </p>
                 <div className="flex gap-4 pt-4">
-                  <Linkedin className="text-gray-500 hover:text-white cursor-pointer" />
-                  <Mail className="text-gray-500 hover:text-white cursor-pointer" />
+                  <a
+                    href="https://www.linkedin.com/in/dr-muhammad-waqas-arham-acca-dba-pmp-rmp-mba-21050576"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin className="text-gray-500 hover:text-white cursor-pointer" />
+                  </a>
+                  <a href="mailto:example@email.com">
+                    <Mail className="text-gray-500 hover:text-white cursor-pointer" />
+                  </a>
                 </div>
               </div>
             </motion.div>

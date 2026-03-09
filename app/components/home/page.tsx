@@ -166,7 +166,7 @@ const Home = () => {
 
             <motion.button
               whileTap={{ scale: 0.96 }}
-              className="px-8 py-3.5 sm:py-4 cursor-pointer bg-white/5 border border-white/10 text-white rounded-xl font-bold text-base sm:text-lg backdrop-blur-md w-full sm:w-auto"
+              className="px-8 py-3.5 sm:py-4 bg-white/5 border border-white/10 text-white rounded-xl font-bold text-base sm:text-lg backdrop-blur-md w-full sm:w-auto"
             >
               View Case Studies
             </motion.button>
