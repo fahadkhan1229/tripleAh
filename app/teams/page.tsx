@@ -7,10 +7,10 @@ import { X, Linkedin, Mail, ArrowRight } from "lucide-react";
 const teamData = [
   {
     id: 1,
-    name: "Peter Rutland",
+    name: "Muhammad Waqas Arham",
     role: "Managing Partner",
     company: "CVC",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800",
+    image: "/person1.jpeg",
     bio: "Specializing in capital markets and strategic financial growth for the group.",
   },
   {
@@ -93,7 +93,7 @@ export default function TeamGrid() {
                 <X size={28} />
               </button>
               
-              <img src={selectedMember.image} className="w-40 h-40 rounded-xl object-cover mb-8 border border-white/10 shadow-lg" alt="" />
+              <img src={selectedMember.image} className="w-40 h-40 rounded-xl object-center mb-8 border border-white/10 shadow-lg" alt="" />
               <h2 className="text-3xl font-black mb-1">{selectedMember.name}</h2>
               <p className="text-blue-500 font-bold mb-8 uppercase text-xs tracking-widest">{selectedMember.role}</p>
               

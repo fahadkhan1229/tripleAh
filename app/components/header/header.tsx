@@ -47,7 +47,7 @@ const Header = () => {
       animate={{ y: 0 }}
       className="fixed top-0 w-full z-[100]"
     >
-      <div className="max-w-7xl mx-auto backdrop-blur-xl bg-white/5 border border-white/10 px-3 md:py-3 flex justify-between items-center shadow-2xl">
+      <div className="max-w-7xl mx-auto backdrop-blur-xl bg-white/5 border border-white/10 px-3  flex justify-between items-center shadow-2xl">
         {/* Fixed Bold Blue Logo */}
         <Link href="#home" aria-label="Go to homepage">
           <div className="flex items-center gap-3 group">
@@ -57,8 +57,8 @@ const Header = () => {
               <Image
                 src="/logo1.png"
                 alt="Triple A H Group Oy Logo"
-                width={160}
-                height={160}
+                width={170}
+                height={170}
                 className="relative z-10 bg-none "
               />
             </div>

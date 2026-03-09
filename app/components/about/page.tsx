@@ -106,7 +106,7 @@ const AboutUs = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
               <div className="relative bg-[#11182f] p-4 md:p-10 rounded-3xl border border-white/5">
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  CEO Message – M.W.A
+                  CEO Message 
                 </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed text-base">
                   "As Founder and CEO, it is my privilege to lead an
@@ -212,7 +212,7 @@ const AboutUs = () => {
           {/* Why Choose Us - Minimal Banner */}
           <motion.div
             variants={item}
-            className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl p-6 md:p-12 border border-blue-500/20"
+            className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl p-6 lg:p-12 border border-blue-500/20"
           >
             <h3 className="text-2xl font-bold text-white mb-8">
               Why Partner With Us?

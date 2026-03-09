@@ -158,7 +158,7 @@ const ContactUs = () => {
                   <MapPin className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <span className="text-gray-200 font-medium text-base group-hover:text-white transition">
-                  Helsinki, Finland (Serving Globally)
+                  Espoo, Finland (Serving Globally)
                 </span>
               </motion.div>
             </div>
