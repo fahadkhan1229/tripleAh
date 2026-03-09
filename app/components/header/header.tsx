@@ -89,7 +89,7 @@ const Header = () => {
 
         {/* Desktop Button */}
         <div className="hidden lg:block">
-          <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold px-6 py-2.5 rounded-xl shadow-lg shadow-blue-500/20 transition-all hover:scale-105 active:scale-95">
+          <button className="bg-gradient-to-r  cursor-pointer from-blue-500 to-purple-500 text-white font-bold px-6 py-2.5 rounded-xl shadow-lg shadow-blue-500/20 transition-all hover:scale-105 active:scale-95">
             Get a Quote
           </button>
         </div>

@@ -50,7 +50,7 @@ export default function LandingPage() {
       <WhyChooseUs />
       <Services />
       <OurBusinesses /> {/* 👈 new section added */}
-      <Teams />
+      {/* <Teams /> */}
       <ContactUs />
       <Footer />
       <AnimatePresence>

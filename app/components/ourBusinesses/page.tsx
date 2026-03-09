@@ -8,13 +8,13 @@ const OtherBusinesses = () => {
       title: "Triple A H Group Oy",
       subtitle: "Corporate Advisory & Business Group",
       icon: <Award />,
-      desc: "Operating the Fafa’s Franchise in Iso Omena.",
+      desc: "A Finland-based corporate group delivering accounting, financial management, and strategic consultancy services internationally.",
     },
     {
       title: "M Arham Ravintola Oy",
       subtitle: "Franchise Partner",
       icon: <Award />,
-      desc: "Operating hospitality franchise partnerships in Finland in full compliance with Finnish regulations.",
+      desc: "Operating the Fafa’s Franchise in Iso Omena.",
     },
    
   ];

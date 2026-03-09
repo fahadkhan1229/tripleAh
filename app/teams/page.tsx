@@ -7,36 +7,36 @@ import { X, Linkedin, Mail, ArrowRight } from "lucide-react";
 const teamData = [
   {
     id: 1,
-    name: "Muhammad Waqas Arham",
+    name: "Dr Muhammad Waqas Arham",
     role: "Managing Partner",
-    company: "CVC",
+    company: "Triple A H Group Oy",
     image: "/person1.jpeg",
-    bio: "Specializing in capital markets and strategic financial growth for the group.",
+    bio: "Focused on Accounting, Finance, and advancing financial growth initiatives.",
   },
-  {
-    id: 2,
-    name: "Osama Nahhat",
-    role: "Managing Director",
-    company: "CVC",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800",
-    bio: "Leading international debt advisory and structured finance operations.",
-  },
-  {
-    id: 3,
-    name: "Faris Cassim",
-    role: "Senior Portfolio Manager",
-    company: "ADIA",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800",
-    bio: "Expert in global asset classes and investment strategy.",
-  },
-  {
-    id: 4,
-    name: "Stefan Janke",
-    role: "Investment Manager",
-    company: "ADIA",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
-    bio: "Focused on equity capital markets and IPO readiness.",
-  },
+  // {
+  //   id: 2,
+  //   name: "Osama Nahhat",
+  //   role: "Managing Director",
+  //   company: "CVC",
+  //   image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800",
+  //   bio: "Leading international debt advisory and structured finance operations.",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Faris Cassim",
+  //   role: "Senior Portfolio Manager",
+  //   company: "ADIA",
+  //   image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800",
+  //   bio: "Expert in global asset classes and investment strategy.",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Stefan Janke",
+  //   role: "Investment Manager",
+  //   company: "ADIA",
+  //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+  //   bio: "Focused on equity capital markets and IPO readiness.",
+  // },
 ];
 
 export default function TeamGrid() {
@@ -89,7 +89,7 @@ export default function TeamGrid() {
               layoutId={`card-${selectedMember.id}`}
               className="fixed inset-y-0 right-0 w-full md:w-[500px] bg-[#0f0f0f] z-[60] p-10 border-l border-white/10 shadow-2xl overflow-y-auto"
             >
-              <button onClick={() => setSelectedMember(null)} className="absolute top-6 right-6 text-gray-400 hover:text-white">
+              <button onClick={() => setSelectedMember(null)} className="absolute cursor-pointer top-6 right-6 text-gray-400 hover:text-white">
                 <X size={28} />
               </button>
               
