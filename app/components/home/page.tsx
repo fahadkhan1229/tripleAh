@@ -6,6 +6,7 @@ import {
   useReducedMotion,
   easeOut,
 } from "framer-motion";
+import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
 
 const Home = () => {
@@ -150,26 +151,31 @@ const Home = () => {
           </motion.p>
 
           {/* Buttons */}
-          <motion.div
-            variants={fadeInUp}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center px-6 sm:px-0"
-          >
-            <motion.button
-              whileHover={
-                !isMobile ? { scale: 1.06, rotate: [0, 1, -1, 0] } : {}
-              }
-              whileTap={{ scale: 0.96 }}
-              className="px-8 py-3.5 sm:py-4 cursor-pointer bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-xl font-bold text-base sm:text-lg shadow-lg w-full sm:w-auto"
-            >
-              Start Your Journey
-            </motion.button>
+         <motion.div
+  variants={fadeInUp}
+  className="flex flex-col sm:flex-row gap-4 justify-center items-center px-6 sm:px-0"
+>
+  <a href="#contact">
+    <motion.button
+      whileHover={
+        !isMobile ? { scale: 1.06, rotate: [0, 1, -1, 0] } : {}
+      }
+      whileTap={{ scale: 0.96 }}
+      className="px-8 py-3.5 sm:py-4 cursor-pointer bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-xl font-bold text-base sm:text-lg shadow-lg w-full sm:w-auto"
+    >
+      Start Your Journey
+    </motion.button>
+  </a>
 
-            <motion.button
-              whileTap={{ scale: 0.96 }}
-              className="px-8 py-3.5 sm:py-4 bg-white/5 border border-white/10 text-white rounded-xl font-bold text-base sm:text-lg backdrop-blur-md w-full sm:w-auto"
-            >
-              View Case Studies
-            </motion.button>
+        
+            <Link href="#caseStudy">
+  <motion.button
+    whileTap={{ scale: 0.96 }}
+    className="px-8 py-3.5 sm:py-4 cursor-pointer bg-white/5 border border-white/10 text-white rounded-xl font-bold text-base sm:text-lg backdrop-blur-md w-full sm:w-auto"
+  >
+    View Case Studies
+  </motion.button>
+</Link>
           </motion.div>
         </motion.div>
       </div>

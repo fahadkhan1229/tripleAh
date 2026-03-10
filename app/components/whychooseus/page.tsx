@@ -93,15 +93,17 @@ const WhyChooseZoner = () => {
                 {item.title}
               </h3>
 
-              {/* Description with highlighted link */}
               <p className="text-gray-300 text-base leading-relaxed mb-6">
                 {item.desc.split(item.link || "").map((part, i, arr) => (
                   <span key={i}>
                     {part}
                     {item.link && i < arr.length - 1 && (
-                      <span className="text-orange-400 cursor-pointer hover:text-orange-300 underline underline-offset-4 decoration-orange-400/30">
+                      <a
+                        href="#contact"
+                        className="text-orange-400 hover:text-orange-300 underline underline-offset-4 decoration-orange-400/30"
+                      >
                         {item.link}
-                      </span>
+                      </a>
                     )}
                   </span>
                 ))}

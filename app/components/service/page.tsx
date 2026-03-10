@@ -6,66 +6,79 @@ import { ArrowRight, Plus, Minus } from "lucide-react";
 const Services = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const services = [
-    {
-      title: "Accounting and tax",
-      description:
-        "We provide comprehensive accounting and tax services to manage your global financial operations and compliance requirements securely.",
-      items: [
-        "Regulatory reporting services",
-        "Tax compliance",
-        "Bookkeeping",
-        "Statutory reporting",
-      ],
-    },
-    {
-      title: "Capital markets",
-      description:
-        "We provide comprehensive capital markets services to manage your global capital markets, structured finance and private credit transactions securely.",
-      items: [
-        "Regulatory reporting services",
-        "Agency services",
-        "SPV / issuer services",
-        "Loan services",
-        "Trustee services",
-        "Transaction structures and asset classes",
-        "Escrow and paying agent services",
-      ],
-    },
-    {
-      title: "Fund services",
-      description:
-        "End-to-end administration for investment funds across multiple jurisdictions.",
-      items: [
-        "AIFM services",
-        "Depositary services",
-        "Fund accounting",
-        "Transfer agency",
-      ],
-    },
-    {
-      title: "Global entity management",
-      description:
-        "Streamline your international presence with our entity governance and compliance solutions.",
-      items: [
-        "Corporate secretarial",
-        "Registered office",
-        "Director services",
-        "Directorships",
-      ],
-    },
-    {
-      title: "Payroll and HR",
-      description:
-        "Reliable, scalable payroll and human resources support for your global workforce.",
-      items: [
-        "International payroll",
-        "HR administration",
-        "Employee onboarding",
-        "Benefits management",
-      ],
-    },
-  ];
+ const services = [
+  {
+    title: "Accounting & Tax",
+    description:
+      "We provide end-to-end accounting and tax solutions to ensure compliance, accuracy, and financial clarity across your operations.",
+    items: [
+      "Full-cycle bookkeeping",
+      "IFRS & local GAAP compliance",
+      "VAT & tax filings",
+      "Financial statements preparation",
+      "Audit coordination & support",
+    ],
+  },
+  {
+    title: "Financial Management",
+    description:
+      "Strategic financial oversight to strengthen decision-making, optimize performance, and support sustainable growth.",
+    items: [
+      "Budgeting & forecasting",
+      "Cash-flow planning",
+      "Cost optimization strategies",
+      "Financial analysis & reporting",
+    ],
+  },
+  {
+    title: "Business Consultancy",
+    description:
+      "Advisory services designed to enhance operational efficiency, support transformation, and drive long-term value.",
+    items: [
+      "Business restructuring",
+      "Operational efficiency improvement",
+      "Digital transformation planning",
+      "Process automation & workflow redesign",
+      "Risk assessment & internal controls",
+    ],
+  },
+  {
+    title: "Corporate Services",
+    description:
+      "Comprehensive corporate support to ensure smooth governance, compliance, and administrative operations.",
+    items: [
+      "Corporate tax planning",
+      "Company formation & registration",
+      "Contract drafting & review",
+      "Compliance management",
+    ],
+  },
+  {
+    title: "Payroll & HR Solutions",
+    description:
+      "Reliable payroll and HR support to ensure accuracy, compliance, and employee satisfaction.",
+    items: [
+      "Monthly payroll processing",
+      "Employee onboarding & offboarding",
+      "Employment contract preparation",
+      "Benefits administration",
+      "HR policy development",
+      "Time-tracking & attendance management",
+      "Statutory reporting & compliance",
+    ],
+  },
+  {
+    title: "Strategic Growth & Advisory",
+    description:
+      "Supporting your business in scaling, optimizing, and achieving sustainable growth.",
+    items: [
+      "Business growth strategy",
+      "Market research & competitive analysis",
+      "Performance improvement programs",
+      "Expansion strategy & feasibility studies",
+    ],
+  },
+];
 
   return (
     <section

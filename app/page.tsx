@@ -11,6 +11,8 @@ import WhyChooseUs from "./components/whychooseus/page";
 import OurBusinesses from "./components/ourBusinesses/page";
 import Footer from "./components/header/footer";
 import Teams from "./components/teams/page";
+import CaseStudy from "./components/caseStudy/page";
+
 export default function LandingPage() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -51,6 +53,7 @@ export default function LandingPage() {
       <Services />
       <OurBusinesses /> {/* 👈 new section added */}
       <Teams />
+      <CaseStudy />
       <ContactUs />
       <Footer />
       <AnimatePresence>
