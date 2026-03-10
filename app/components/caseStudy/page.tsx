@@ -123,7 +123,7 @@ export default function CaseStudies() {
                   </div>
                   <ul className="space-y-2">
                     {caseItem.challenges.map((c, i) => (
-                      <li key={i} className="text-sm text-gray-400 leading-relaxed pl-2 border-l border-red-400/30">{c}</li>
+                      <li key={i} className="text-sm text-gray-200 leading-relaxed pl-2 border-l border-red-400/30">{c}</li>
                     ))}
                   </ul>
                 </div>
@@ -136,7 +136,7 @@ export default function CaseStudies() {
                   </div>
                   <ul className="space-y-2">
                     {caseItem.solution.map((s, i) => (
-                      <li key={i} className="text-sm text-gray-400 leading-relaxed pl-2 border-l border-blue-400/30">{s}</li>
+                      <li key={i} className="text-sm text-gray-200 leading-relaxed pl-2 border-l border-blue-400/30">{s}</li>
                     ))}
                   </ul>
                 </div>

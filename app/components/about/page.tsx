@@ -217,7 +217,7 @@ const AboutUs = () => {
             <h3 className="text-2xl font-bold text-white mb-8">
               Why Partner With Us?
             </h3>
-            <div className="flex flex-wrap md:justify-center gap-6 md:gap-12">
+            <div className="flex flex-wrap md:justify-center gap-6 md:gap-10">
               {[
                 "Global Expertise",
                 "Precision Driven",

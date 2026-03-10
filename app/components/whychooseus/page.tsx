@@ -71,7 +71,7 @@ const WhyChooseZoner = () => {
               key={index}
               variants={cardVariants}
               whileHover={{ scale: 1.04 }}
-              className="relative group p-4 md:p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-blue-500/40 transition-all duration-300"
+              className="relative group p-4 lg:p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-blue-500/40 transition-all duration-300"
             >
               {/* Icon with hover */}
               <motion.div

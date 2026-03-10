@@ -83,13 +83,13 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="min-h-screen bg-[#0d1425] text-white py-20 px-6 font-sans"
+      className="min-h-screen bg-[#0d1425] text-white py-12 px-6 font-sans"
     >
       <div className="max-w-7xl mx-auto border border-white/10 rounded-[2.5rem] overflow-hidden backdrop-blur-xl bg-white/[0.02] shadow-2xl flex flex-col md:flex-row">
         {/* Left Sidebar: Navigation List */}
-        <div className="w-full md:w-1/3 border-r border-white/10 bg-[#0d1425]">
-          <div className="p-8 border-b border-white/10">
-            <h2 className="text-xl font-bold tracking-tight text-blue-400">
+        <div className="w-full md:w-3/7 border-r border-white/10 bg-[#0d1425]">
+          <div className="md:p-8 p-4 px-2 md:px-4  border-b border-white/10">
+            <h2 className="text-3xl  font-bold tracking-tight text-blue-400">
               Our Services
             </h2>
           </div>
@@ -123,7 +123,7 @@ const Services = () => {
         </div>
 
         {/* Right Detail Panel: Information Display */}
-        <div className="w-full md:w-2/3 p-8 md:p-16 relative overflow-hidden">
+        <div className="w-full md:w-3/5 lg:w-1/3 p-4 md:p-4 lg:p-16 relative overflow-hidden">
           {/* Subtle Glass Glows */}
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full" />
 
@@ -136,7 +136,7 @@ const Services = () => {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="relative z-10"
             >
-              <p className="text-gray-300 text-lg leading-relaxed mb-12 max-w-2xl">
+              <p className="text-gray-300 text-md leading-relaxed mb-12 max-w-2xl">
                 {services[activeTab].description}
               </p>
 
@@ -144,7 +144,7 @@ const Services = () => {
                 {services[activeTab].title}
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-9">
                 {services[activeTab].items.map((item, idx) => (
                   <motion.div
                     key={idx}
