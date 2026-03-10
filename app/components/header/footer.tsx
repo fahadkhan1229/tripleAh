@@ -13,9 +13,11 @@ const Footer = () => {
       title: "Navigation",
       links: [
         { name: "Home", href: "#home" },
-        { name: "About Us", href: "#about" },
+        { name: "About", href: "#about" },
         { name: "Services", href: "#services" },
         { name: "Our Businesses", href: "#businesses" },
+        { name: "Meet our team", href: "#teams" },
+        { name: "Case Studies", href: "#caseStudy" },
         { name: "Contact", href: "#contact" },
       ],
     },

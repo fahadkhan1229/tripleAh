@@ -47,10 +47,10 @@ export default function TeamGrid() {
   return (
     <section
       id="teams"
-      className="min-h-screen  scroll-mt-32 bg-[#0a0f1d] py-24 px-6 text-white font-sans"
+      className="min-h-screen  scroll-mt-32 bg-[#0a0f1d] py-12 px-6 text-white font-sans"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 border-b border-white/10 pb-6">
+        <h2 className="text-4xl font-bold mb-6 border-b border-white/10 pb-6">
           Meet Our Team
         </h2>
 

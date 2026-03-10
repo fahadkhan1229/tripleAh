@@ -98,7 +98,7 @@ const Services = () => {
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center justify-between p-2 md:p-4 transition-all duration-300 border-b border-white/5 group ${
+                className={`flex items-center justify-between p-3 md:p-4 transition-all duration-300 border-b border-white/5 group ${
                   activeTab === index
                     ? "bg-white/5 text-white"
                     : "text-gray-300 hover:text-gray-300"

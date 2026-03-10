@@ -103,7 +103,7 @@ export default function CaseStudies() {
               key={caseItem.id}
               variants={itemVariants}
               whileHover={{ y: -8, borderColor: "rgba(59, 130, 246, 0.5)" }}
-              className="bg-[#111827] rounded-2xl border border-white/5 p-8 flex flex-col transition-all duration-300 shadow-2xl"
+              className="bg-[#111827] rounded-2xl border border-white/5 p-4 md:p-8 flex flex-col transition-all duration-300 shadow-2xl"
             >
               <div className="mb-6">
                 <span className="text-[10px] uppercase tracking-widest text-blue-400 font-bold bg-blue-400/10 px-3 py-1 rounded-full mb-4 inline-block">

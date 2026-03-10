@@ -130,7 +130,7 @@ const ContactUs = () => {
                   <Mail className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <span className="text-gray-200 font-medium text-base group-hover:text-white transition">
-                  info@atriomgroupoy.com
+                  info@tripleah.com
                 </span>
               </motion.div>
 
