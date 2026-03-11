@@ -21,24 +21,38 @@ const Header = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 150;
-
-      for (const item of navItems) {
-        const element = document.querySelector(item.href);
-        if (element instanceof HTMLElement) {
-          if (
-            scrollPosition >= element.offsetTop &&
-            scrollPosition < element.offsetTop + element.offsetHeight
-          ) {
-            setActiveSection(item.name);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const section = navItems.find(
+              (item) => `#${entry.target.id}` === item.href,
+            );
+            if (section) {
+              setActiveSection(section.name);
+            }
           }
-        }
-      }
-    };
+        });
+      },
+      {
+        rootMargin: "-50% 0px -50% 0px",
+        threshold: 0,
+      },
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const sections = navItems
+      .map((item) => document.querySelector(item.href))
+      .filter((el): el is Element => el !== null);
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
   }, []);
 
   return (
@@ -101,6 +115,8 @@ const Header = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -131,9 +147,13 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <button className="mt-4 w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-4 rounded-xl">
+              <a
+                href="#contact"
+                onClick={() => setIsOpen(false)}
+                className="mt-4 block w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-4 rounded-xl text-center transition-all hover:scale-105 active:scale-95"
+              >
                 Get a Quote
-              </button>
+              </a>
             </div>
           </motion.div>
         )}

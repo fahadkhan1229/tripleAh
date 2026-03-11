@@ -1,49 +1,47 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
 
+const sections = [
+  {
+    title: "Navigation",
+    links: [
+      { name: "Home", href: "#home" },
+      { name: "About", href: "#about" },
+      { name: "Services", href: "#services" },
+      { name: "Our Businesses", href: "#businesses" },
+      { name: "Meet our team", href: "#teams" },
+      { name: "Case Studies", href: "#caseStudy" },
+      { name: "Contact", href: "#contact" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
+      { name: "Cookie Policy", href: "/cookies" },
+    ],
+  },
+];
+
+const socialLinks = [
+  { name: "Facebook", href: "#", icon: Facebook },
+  { name: "Twitter", href: "#", icon: Twitter },
+  { name: "Instagram", href: "#", icon: Instagram },
+  { name: "Linkedin", href: "#", icon: Linkedin },
+];
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const sections = [
-    {
-      title: "Navigation",
-      links: [
-        { name: "Home", href: "#home" },
-        { name: "About", href: "#about" },
-        { name: "Services", href: "#services" },
-        { name: "Our Businesses", href: "#businesses" },
-        { name: "Meet our team", href: "#teams" },
-        { name: "Case Studies", href: "#caseStudy" },
-        { name: "Contact", href: "#contact" },
-      ],
-    },
-    {
-      title: "Legal",
-      links: [
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Service", href: "/terms" },
-        { name: "Cookie Policy", href: "/cookies" },
-      ],
-    },
-  ];
-
-  const socialLinks = [
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Instagram", href: "#", icon: Instagram },
-    { name: "Linkedin", href: "#", icon: Linkedin },
-  ];
 
   return (
     <footer className="bg-[#0a0f1d] border-t border-white/5 text-gray-300">
       <div className="max-w-7xl mx-auto px-6 py-8 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
-          <div className="space-y-">
+          <div className="space-y-4">
             <Link
               href="#home"
               className="transition-opacity hover:opacity-80 inline-block"
@@ -113,8 +111,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-8 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm md:text-lg text-gray-400 text-center md:text-left order-2 md:order-1">
-            &copy; {new Date().getFullYear()} Triple A H Group Oy. All rights
-            reserved.
+            &copy; {currentYear} Triple A H Group Oy. All rights reserved.
           </p>
           <div className="flex space-x-6 order-1 md:order-2">
             {socialLinks.map((item) => (
