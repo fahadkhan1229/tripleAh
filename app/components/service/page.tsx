@@ -123,7 +123,7 @@ const Services = () => {
         </div>
 
         {/* Right Detail Panel: Information Display */}
-        <div className="w-full md:w-3/5 lg:w-1/3 p-4 md:p-4 lg:p-16 relative overflow-hidden">
+        <div className="w-full md:w-3/5 lg:w-1/2 p-4 md:p-4 lg:p-16 relative overflow-hidden">
           {/* Subtle Glass Glows */}
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full" />
 
